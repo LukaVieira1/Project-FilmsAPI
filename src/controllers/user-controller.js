@@ -1,13 +1,28 @@
 import { prisma } from "../helpers/utils.js";
 
-export const index = async (req, res) => {
+export const getALL = async (req, reply) => {
   try {
     let users = await prisma.user.findMany({
-      select: { email: true },
+      select: { name: true, email: true },
     });
-    return res.send({ data: { users } });
+    return reply.send({ data: { users } });
   } catch (error) {
     console.error("users", error);
-    res.status(500).send({ error: `Cannot fetch users` });
+    reply.status(500).send({ error: `Cannot fetch users` });
+  }
+};
+
+export const getByID = async (req, reply) => {
+  const { id } = req.params;
+  try {
+    const user = await prisma.user.findMany({
+      where: {
+        id: Number(id),
+      },
+      select: { name: true, email: true },
+    });
+    return reply.send({ data: { user } });
+  } catch (error) {
+    reply.status(500).send({ error: "Deu problema mermão" });
   }
 };
