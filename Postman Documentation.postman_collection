@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "017e2569-d791-45dd-96eb-2b819708f269",
+		"name": "Projeto semana 14",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "SIGNUP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"teste\",\r\n    \"email\" : \"teste@gmail.com\",\r\n    \"password\" : \"1234\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"luka@gmail.com\",\r\n    \"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "All users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "New Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ikx1a2EgVmllaXJhIiwiZW1haWwiOiJsdWthQGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTM0WiIsInVwZGF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTU4WiIsImlhdCI6MTY0NDU1MDU0NH0.h5janexXBa5192vcmRfufiPjtaTr9925ykFJB5axywY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Esqueceram de mim\",\r\n    \"description\" : \"Guri que é esquecido e enche o saco dos ladrao\",\r\n    \"gender_id\" : \"1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Movie by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ikx1a2EgVmllaXJhIiwiZW1haWwiOiJsdWthQGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTM0WiIsInVwZGF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTU4WiIsImlhdCI6MTY0NDU1MDU0NH0.h5janexXBa5192vcmRfufiPjtaTr9925ykFJB5axywY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "movie by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/movies/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ikx1a2EgVmllaXJhIiwiZW1haWwiOiJsdWthQGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTM0WiIsInVwZGF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTU4WiIsImlhdCI6MTY0NDU1MDU0NH0.h5janexXBa5192vcmRfufiPjtaTr9925ykFJB5axywY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"esqueceram de mim 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/movies/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"movies",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Genders",
+			"item": [
+				{
+					"name": "All genders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/genders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New gender",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ikx1a2EgVmllaXJhIiwiZW1haWwiOiJsdWthQGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTM0WiIsInVwZGF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTU4WiIsImlhdCI6MTY0NDU1MDU0NH0.h5janexXBa5192vcmRfufiPjtaTr9925ykFJB5axywY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Nome do genero\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/genders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gender by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/genders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Gender by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ikx1a2EgVmllaXJhIiwiZW1haWwiOiJsdWthQGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTM0WiIsInVwZGF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTU4WiIsImlhdCI6MTY0NDU1MDU0NH0.h5janexXBa5192vcmRfufiPjtaTr9925ykFJB5axywY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/genders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Gender",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6Ikx1a2EgVmllaXJhIiwiZW1haWwiOiJsdWthQGdtYWlsLmNvbSIsImNyZWF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTM0WiIsInVwZGF0ZWRBdCI6IjIwMjItMDItMTFUMDA6MTA6MDMuMTU4WiIsImlhdCI6MTY0NDU1MDU0NH0.h5janexXBa5192vcmRfufiPjtaTr9925ykFJB5axywY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Terror creppy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/genders/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"genders",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

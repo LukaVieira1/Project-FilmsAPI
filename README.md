@@ -1,4 +1,4 @@
-# Boilerplate de back-end da Otterwise
+# Projeto semana 14 - API de Filmes
 
 ## Tecnologias
 
